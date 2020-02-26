@@ -18,3 +18,9 @@ for (let i = 0; i < slides.length; i++ ) {
 		control(slides[i], i);
 	}
 }
+
+$(".slider__slides").swipe({
+swipeRight:function(event, direction) {
+ $(this).addClass('second');
+ }
+});
