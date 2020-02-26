@@ -18,3 +18,24 @@ for (let i = 0; i < slides.length; i++ ) {
 		control(slides[i], i);
 	}
 }
+
+$(function() {			
+	$(".slider__slides").swipe( {
+		swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+			if (direction === 'left') {
+				if (slidesArea.classList.contains('first')) {
+				control(slides[1], 1)
+				} else if(slidesArea.classList.contains('second')) {
+					control(slides[2], 2)
+				}
+			} else if (direction === 'right') {
+				if (slidesArea.classList.contains('second')) {
+					control(slides[0], 0)
+				} else if(slidesArea.classList.contains('third')) {
+					control(slides[1], 1)
+				}
+			}		
+		},						
+		threshold:0 // Минимальная длина свайпа
+	});
+}); 
