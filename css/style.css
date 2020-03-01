@@ -247,8 +247,7 @@ body {
 	}
 
 	.menu__link:active {
-		color:white;
-		text-decoration:underline;
+		color:#64c29e;
 	}
 
 	.menu__link:active:before {
