@@ -204,6 +204,7 @@ body {
 
 	.menu__icon.active span:nth-child(2) {
 		transform:scale(0);
+		transition-duration:0s;
 	}
 
 	.menu__icon.active span:nth-child(1) {
